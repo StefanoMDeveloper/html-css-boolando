@@ -1,27 +1,44 @@
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
     text-align: left;
 }
 
-#container{
+.container::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.container{
     width: 80%;
     margin: auto;
     background-color: white;
     text-align: center;
+    padding: 20px;
 }
 
+/* carte */
 .item{
-    width: 23%;
-    margin: 1%;
-    position: relative;
+    width: 30%;
+    margin: 5px 1%;
     display: inline-block;
+    padding: 1% 1%;
+}
+
+.item-image{
+    cursor: pointer;
+    position: relative;
 }
 
 .second{
     display: none;
+}
+
+.item img{
+    width: 100%;
 }
 
 .heart{
@@ -35,34 +52,32 @@
     font-size: 25px;
     text-align: center;
     line-height: 30px;
-    text-decoration: none;
+    
 }
 
 .heart:hover{
     color:red;
+    cursor:pointer;
 }
 
 
-.item:hover .first{
+.item-image:hover .first{
     display: none;
 }
 
-.item:hover .second{
+.item-image:hover .second{
     display: block;
 }
+/* carte */
 
-img{
-    height: 100%;
-    width: 100%;
-    background-size: contain;
-}
 
-p{
+/* scritte */
+span{
     font-size: 13px;
     color: rgb(68, 68, 68);
 }
 
-p.prezzo{
+span.prezzo{
     font-size: 12px;
     color: red;
 }
@@ -76,28 +91,28 @@ h4{
     text-transform: uppercase;
 }
 
-.sale{
+/* scritte */
+
+
+/* targhette sconti */
+.tag span{
+    font-size: 13px;
     display: inline-block;
     height: 20px;
     position: relative;
     color: white;
+    bottom: 80px;  
+}
+
+.sale{
     background-color: rgb(238, 28, 84);
-    bottom: 120px;
-    padding-top: 2px;
+    padding: 4px;
 }
 
 .sostenibility{
-    display: inline-block;
-    height: 20px;
-    position: relative;
-    color: white;
     background-color: rgb(9, 179, 71);
-    bottom: 120px;
-    padding-top: 2px;
+    padding: 4px;
 }
+/* targhette sconti */
 
-.tag{
-    height: 100%;
-    width: 100%;
-    font-size: 13px;   
-}
+
